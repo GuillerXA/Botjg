@@ -12,7 +12,7 @@ namespace Microsoft.BotBuilderSamples.Bots
     public class EchoBot : ActivityHandler
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-        {
+        { 
             await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
         }
 
@@ -23,7 +23,7 @@ namespace Microsoft.BotBuilderSamples.Bots
             {
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Hola y Bienvenido"), cancellationToken);
+                    await turnContext.SendActivityAsync(MessageFactory.Text($"Hola y Bienvenido!"), cancellationToken);
                 }
             }
         }
